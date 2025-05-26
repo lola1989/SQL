@@ -1,10 +1,8 @@
-----------------------------------------------------------------
--- INSERT VALUES into Inventory.Furniture
--- Inventory is the Schema 
--- Furniture is the Table name
-----------------------------------------------------------------
-
-
+-- ----------------------------------------------------------------
+-- Author: Lillian ELek
+-- Create date: 2025-05-25
+-- Description: INSERT VALUES into Inventory.Furniture
+-- ----------------------------------------------------------------
 USE TestDatabase;
 GO 
 

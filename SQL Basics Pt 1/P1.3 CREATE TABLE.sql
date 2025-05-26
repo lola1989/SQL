@@ -2,7 +2,7 @@
 -- Author: Lillian ELek
 -- Create date: 2025-05-25
 -- Description: Create Furniture Table on the Inventory Schema
-----------------------------------------------------------------
+-- ----------------------------------------------------------------
 USE TestDatabase;
 GO 
 
