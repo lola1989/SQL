@@ -1,9 +1,9 @@
-----------------------------------------------------------------
--- Scalar Variables are variables that hold a single value
--- such as a number, string, date, or 
--- boolean—not a set or a table. 
--- They only hold during the query
-----------------------------------------------------------------
+-- ----------------------------------------------------------------
+-- Author: Lillian ELek
+-- Create date: 2025-05-25
+-- Description: Understanding Scalar Variables which are variables 
+-- that hold a single value such as a number, string, date, or 
+-- boolean—not a set or a table. They only hold during the query
 
 USE TestDatabase;
 GO
@@ -30,9 +30,7 @@ DECLARE @IntegerValue INT = 7                                   -- Whole Number 
 
 SELECT @IntegerValue
 
-----------------------------------------------------------------
 -- SET is used to SET the value of a scalar variable
-----------------------------------------------------------------
 
 SET @IntegerValue = 10;
 SELECT @IntegerValue
