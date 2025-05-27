@@ -9,7 +9,7 @@ SQL Code goes over:
 - Understaiding DEFAULT and NULL values
 
 ## SQL Basics Pt 2
-Restores [AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak) backup file and reviews basic SQL Queries
+Restores [AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak) backup file and reviews basic SQL Queries. You can also use this [link](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) to obtain the newest AdventureWorks backup file.
 - Backup of AdventureWorks2019
 - SELECT TOP
 - WHERE
