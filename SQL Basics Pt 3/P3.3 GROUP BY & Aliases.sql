@@ -1,7 +1,7 @@
 -- ----------------------------------------------------------------
 -- Author: Lillian Elek
 -- Create date: 2025-05-26
--- Description: Using GROUP BY with the aggregate function COUNT
+-- Description: Using GROUP BY & Aliases with the aggregate function COUNT
 -- ----------------------------------------------------------------
 USE [AdventureWorks2019]
 GO
