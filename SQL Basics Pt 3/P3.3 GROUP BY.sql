@@ -1,7 +1,7 @@
 -- ----------------------------------------------------------------
 -- Author: Lillian Elek
 -- Create date: 2025-05-26
--- Description: GROUP BY
+-- Description: Using GROUP BY with the aggregate function COUNT
 -- ----------------------------------------------------------------
 USE [AdventureWorks2019]
 GO
@@ -25,6 +25,18 @@ FROM Production.Product
 -- How many of each ReorderPoint values are in the table
 SELECT ReorderPoint,
     COUNT(ReorderPoint) AS ReorderPointCount    
+FROM Production.Product
+GROUP BY ReorderPoint
+ORDER BY ReorderPoint
+
+-- You can keep adding values as long as they are aggregate values
+-- Added ROUND to show only 2 decimal places for the aggregate value
+SELECT ReorderPoint,
+    COUNT(ReorderPoint) AS ReorderPointCount,
+    SUM(StandardCost) AS Sum_StandardCost,
+    MIN(StandardCost) AS Min_StandardCost,
+    MAX(StandardCost) AS Max_StandardCost,
+    ROUND(AVG(StandardCost),2)  AS Avg_StandardCost 
 FROM Production.Product
 GROUP BY ReorderPoint
 ORDER BY ReorderPoint
@@ -55,3 +67,4 @@ SELECT [ProductID],
     [rowguid],
     [ModifiedDate]
 FROM Production.Product
+
