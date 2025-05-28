@@ -1,7 +1,7 @@
 -- ----------------------------------------------------------------
 -- Author: Lillian Elek
 -- Create date: 2025-05-28
--- Description: DATEADD - used to add or subtract a int to a date
+-- Description: DATEADD - used to add or subtract an int to a date
 -- DATEADD(interval, number, date)
 -- ----------------------------------------------------------------
 USE [AdventureWorks2019]
