@@ -1,0 +1,86 @@
+### SQL Server Functions Cheat Sheet
+
+#### 🔄 Conversion Functions
+
+| Function        | Syntax                                              | Example                                                 | Description                                                               |
+| --------------- | --------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------- |
+|  CAST()         |  CAST(expression AS data_type[(length)])            |  SELECT CAST(25.65 AS INT);                             | Converts a value to a specified data type.                                |
+|  CONVERT()      |  CONVERT(data_type[(length)], expression, [style])  |  SELECT CONVERT(VARCHAR(10), GETDATE(), 101);           | Converts a value to a specified data type with optional formatting style. |
+|  PARSE()        |  PARSE(expression AS data_type [USING culture])     |  SELECT PARSE('Monday, 13 December 2021' AS DATETIME);  | Converts a string to a date/time or number using a culture.               |
+|  TRY_CAST()     |  TRY_CAST(expression AS data_type)                  |  SELECT TRY_CAST('123' AS INT);                         | Attempts to cast and returns NULL if it fails.                            |
+|  TRY_CONVERT()  |  TRY_CONVERT(data_type, expression, [style])        |  SELECT TRY_CONVERT(INT, '123');                        | Attempts to convert and returns NULL if it fails.                         |
+
+#### 🔢 Numeric Functions
+
+| Function    | Syntax                    | Example                      | Description                              |
+| ----------- | ------------------------- | ---------------------------- | ---------------------------------------- |
+|  ABS()      |  ABS(number)              |  SELECT ABS(-5);             | Returns the absolute value.              |
+|  CEILING()  |  CEILING(number)          |  SELECT CEILING(4.2);        | Rounds up to nearest integer.            |
+|  FLOOR()    |  FLOOR(number)            |  SELECT FLOOR(4.9);          | Rounds down to nearest integer.          |
+|  ROUND()    |  ROUND(number, decimals)  |  SELECT ROUND(123.4567, 2);  | Rounds a number to a set decimal places. |
+
+#### 📅 Date and Time Functions
+
+| Function     | Syntax                                   | Example                                             | Description                               |
+| ------------ | ---------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
+|  GETDATE()   |  GETDATE()                               |  SELECT GETDATE();                                  | Returns current system date and time.     |
+|  DATEADD()   |  DATEADD(datepart, number, date)         |  SELECT DATEADD(day, 10, '2025-05-28');             | Adds an interval to a date.               |
+|  DATEDIFF()  |  DATEDIFF(datepart, startdate, enddate)  |  SELECT DATEDIFF(day, '2025-01-01', '2025-05-28');  | Returns the difference between two dates. |
+|  DATENAME()  |  DATENAME(datepart, date)                |  SELECT DATENAME(month, '2025-05-28');              | Returns datepart as string.               |
+|  DATEPART()  |  DATEPART(datepart, date)                |  SELECT DATEPART(month, '2025-05-28');              | Returns datepart as integer.              |
+
+#### 🔤 String Functions
+
+| Function      | Syntax                             | Example                                          | Description                |
+| ------------- | ---------------------------------- | ------------------------------------------------ | -------------------------- |
+|  LEN()        |  LEN(string)                       |  SELECT LEN('Hello');                            | Returns string length.     |
+|  LOWER()      |  LOWER(string)                     |  SELECT LOWER('HELLO');                          | Converts to lowercase.     |
+|  UPPER()      |  UPPER(string)                     |  SELECT UPPER('hello');                          | Converts to uppercase.     |
+|  LTRIM()      |  LTRIM(string)                     |  SELECT LTRIM('  Hello');                        | Trims leading spaces.      |
+|  RTRIM()      |  RTRIM(string)                     |  SELECT RTRIM('Hello  ');                        | Trims trailing spaces.     |
+|  SUBSTRING()  |  SUBSTRING(string, start, length)  |  SELECT SUBSTRING('Hello', 2, 3);                | Extracts part of a string. |
+|  REPLACE()    |  REPLACE(string, from, to)         |  SELECT REPLACE('Hello World', 'World', 'SQL');  | Replaces text in a string. |
+
+#### 🧠 Logical Functions
+
+| Function     | Syntax                            | Example                               | Description                            |
+| ------------ | --------------------------------- | ------------------------------------- | -------------------------------------- |
+|  ISNULL()    |  ISNULL(expression, replacement)  |  SELECT ISNULL(NULL, 'Replacement');  | Replaces NULL with specified value.    |
+|  COALESCE()  |  COALESCE(expr1, expr2, ...)      |  SELECT COALESCE(NULL, NULL, 'A');    | Returns first non-null value.          |
+|  NULLIF()    |  NULLIF(expr1, expr2)             |  SELECT NULLIF(5, 5);                 | Returns NULL if expressions are equal. |
+
+#### 📊 Aggregate Functions
+
+| Function  | Syntax          | Example                              | Description             |
+| --------- | --------------- | ------------------------------------ | ----------------------- |
+|  AVG()    |  AVG(column)    |  SELECT AVG(salary) FROM employees;  | Returns average value.  |
+|  COUNT()  |  COUNT(column)  |  SELECT COUNT(id) FROM employees;    | Counts non-NULL values. |
+|  MAX()    |  MAX(column)    |  SELECT MAX(salary) FROM employees;  | Returns max value.      |
+|  MIN()    |  MIN(column)    |  SELECT MIN(salary) FROM employees;  | Returns min value.      |
+|  SUM()    |  SUM(column)    |  SELECT SUM(salary) FROM employees;  | Returns sum of values.  |
+
+#### 🔗 Join Types
+
+| Join Type    | Syntax                                                       | Example                                                                                      | Description                                                               |
+| ------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+|  INNER JOIN  |  SELECT * FROM A INNER JOIN B ON A.id = B.a_id               |  SELECT * FROM employees INNER JOIN departments ON employees.dept_id = departments.id;       | Returns records with matching values in both tables.                      |
+|  LEFT JOIN   |  SELECT * FROM A LEFT JOIN B ON A.id = B.a_id                |  SELECT * FROM employees LEFT JOIN departments ON employees.dept_id = departments.id;        | Returns all records from left table and matched records from right table. |
+|  RIGHT JOIN  |  SELECT * FROM A RIGHT JOIN B ON A.id = B.a_id               |  SELECT * FROM employees RIGHT JOIN departments ON employees.dept_id = departments.id;       | Returns all records from right table and matched records from left table. |
+|  FULL JOIN   |  SELECT * FROM A FULL OUTER JOIN B ON A.id = B.a_id          |  SELECT * FROM employees FULL OUTER JOIN departments ON employees.dept_id = departments.id;  | Returns all records when there is a match in one of the tables.           |
+|  CROSS JOIN  |  SELECT * FROM A CROSS JOIN B                                |  SELECT * FROM employees CROSS JOIN departments;                                             | Returns Cartesian product of both tables.                                 |
+|  SELF JOIN   |  SELECT A.*, B.* FROM table A JOIN table B ON A.col = B.col  |  SELECT A.name, B.name FROM employees A JOIN employees B ON A.manager_id = B.id;             | Joins a table to itself.                                                  |
+
+#### 🧩 Subquery Types
+
+| Subquery Type       | Syntax / Location                                                       | Example                                                                                                         | Description                                                          |
+| ------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Scalar Subquery     |  SELECT (SELECT TOP 1 salary FROM employees)                            |  SELECT (SELECT MAX(salary) FROM employees);                                                                    | Returns a single value. Used in SELECT, WHERE, or SET clauses.       |
+| Column Subquery     |  SELECT (SELECT name FROM dept WHERE id=1)                              |  SELECT (SELECT name FROM departments WHERE id = e.dept_id) FROM employees e;                                   | Returns a single column. Useful in scalar context or IN clause.      |
+| Row Subquery        |  SELECT * FROM table WHERE (col1, col2) = (SELECT colA, colB FROM ...)  |  SELECT * FROM employees WHERE (first_name, last_name) = (SELECT fname, lname FROM managers WHERE id = 1);      | Returns a single row of multiple columns.                            |
+| Table Subquery      |  SELECT * FROM (SELECT * FROM table WHERE ...) AS sub                   |  SELECT * FROM (SELECT * FROM employees WHERE salary > 50000) AS high_earners;                                  | Treated as a derived table in the FROM clause.                       |
+| Correlated Subquery |  SELECT * FROM A WHERE EXISTS (SELECT 1 FROM B WHERE A.id = B.a_id)     |  SELECT name FROM employees e WHERE EXISTS (SELECT 1 FROM departments d WHERE d.id = e.dept_id);                | Subquery references column from outer query. Executes per outer row. |
+| EXISTS Subquery     |  SELECT col FROM table WHERE EXISTS (SELECT 1 FROM ...)                 |  SELECT name FROM employees WHERE EXISTS (SELECT 1 FROM departments WHERE employees.dept_id = departments.id);  | Tests for the existence of rows returned by subquery.                |
+| IN Subquery         |  SELECT col FROM table WHERE col IN (SELECT col FROM ...)               |  SELECT name FROM employees WHERE dept_id IN (SELECT id FROM departments WHERE name = 'Sales');                 | Filters with values from subquery.                                   |
+| ANY/ALL Subquery    |  SELECT col FROM table WHERE val > ANY (SELECT ...)                     |  SELECT salary FROM employees WHERE salary > ALL (SELECT salary FROM interns);                                  | Compares value with a set from subquery.                             |
+
+
