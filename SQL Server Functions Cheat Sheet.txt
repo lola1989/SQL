@@ -82,5 +82,3 @@
 | EXISTS Subquery     |  SELECT col FROM table WHERE EXISTS (SELECT 1 FROM ...)                 |  SELECT name FROM employees WHERE EXISTS (SELECT 1 FROM departments WHERE employees.dept_id = departments.id);  | Tests for the existence of rows returned by subquery.                |
 | IN Subquery         |  SELECT col FROM table WHERE col IN (SELECT col FROM ...)               |  SELECT name FROM employees WHERE dept_id IN (SELECT id FROM departments WHERE name = 'Sales');                 | Filters with values from subquery.                                   |
 | ANY/ALL Subquery    |  SELECT col FROM table WHERE val > ANY (SELECT ...)                     |  SELECT salary FROM employees WHERE salary > ALL (SELECT salary FROM interns);                                  | Compares value with a set from subquery.                             |
-
-
