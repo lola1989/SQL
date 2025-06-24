@@ -18,11 +18,12 @@ CREATE TABLE [HumanResources].[Department_WithIndexes](
 	[ModifiedDate] [datetime] NOT NULL
 )
 
--- CLUSTERED INDEX on single filedCREATE CLUSTERED INDEX cix_Department_WithIndexes_DepartmentID
+-- CLUSTERED INDEX on single field
+-- CREATE CLUSTERED INDEX cix_Department_WithIndexes_DepartmentID
 --     ON [HumanResources].[Department_WithIndexes] (DepartmentID)
 -- 
 
--- CLUSTERED INDEX on two fileds
+-- CLUSTERED INDEX on two fields
 -- CREATE CLUSTERED INDEX cix_Department_WithIndexes_DepartmentID_Name
 --     ON [HumanResources].[Department_WithIndexes] (DepartmentID, [Name])
 
