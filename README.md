@@ -28,3 +28,12 @@ Part 3 goes over:
 - DISTINCT
 - GROUP BY
 - HAVING
+
+## SQL Intermediate Pt 1
+
+## SQL Intermediate Pt 2
+
+## Indexex
+
+## Window Functions
+
