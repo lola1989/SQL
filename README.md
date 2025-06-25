@@ -23,7 +23,7 @@ Restores [AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/re
 - TRUNCATE
 
 ## SQL Basics Pt 3
-Part 3 goes over
+Part 3 goes over:
 - ORDER BY
 - DISTINCT
 - GROUP BY
