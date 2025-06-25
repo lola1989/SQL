@@ -37,6 +37,6 @@ INSERT INTO [HumanResources].[Department_WithIndexes] (
         [GroupName],
         [ModifiedDate] FROM HumanResources.Department
 
--- Shows how the first SELECT Statement is ordered by Name (just how we created it to be)
+-- Shows how the first SELECT Statement is ordered by Name (just how it's created)
 SELECT * FROM [HumanResources].[Department_WithIndexes]
 -- SELECT * FROM [HumanResources].[Department]
