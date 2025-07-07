@@ -3,7 +3,6 @@ SQL Code for everyday use and general understanding.
 
 ## SQL Basics Pt 1
 SQL Code goes over:
-- The 7 Stages of SQL Order of Execution
 - Creating a Database & Schema
 - Creating Custom Variables
 - Creating a Table and understanding the different types of variables
