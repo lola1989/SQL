@@ -1,6 +1,9 @@
 # SQL
 SQL Code for everyday use and general understanding.
 
+## The 7 Stages of SQL Order of Execution
+This document is an explanation of how SQL runs/ executes the query
+
 ## SQL Basics Pt 1
 SQL Code goes over:
 - Creating a Database & Schema
