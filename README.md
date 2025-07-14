@@ -2,6 +2,7 @@
 This repository contains:
 - General SQL Syntax
 - The 7 Stages of SQL Order of Execution
+- SQL Server Functions Cheat Sheet
 
 ## The 7 Stages of SQL Order of Execution
 This document is an explanation of how SQL runs/ executes the query
