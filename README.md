@@ -66,3 +66,12 @@ SQL Code discussing the types of indexes:
 
 ## Window Functions
 
+
+<details>
+  <summary>Click to expand</summary>
+
+  This content will be hidden until the user clicks "Click to expand".  
+  You can include anything here—text, code blocks, images, etc.
+
+  ```python
+  print("Hello from inside the dropdown!")
