@@ -1,8 +1,9 @@
 # SQL
 This repository contains:
 - General SQL Syntax
-- The 7 Stages of SQL Order of Execution
+- [The 7 Stages of SQL Order of Execution](/7%20Stages%20of%20SQL%20Order%20of%20Execution.txt)
 - SQL Server Functions Cheat Sheet
+- SQL Catalog Views and Metadata Functions
 
 ## The 7 Stages of SQL Order of Execution
 This document is an explanation of how SQL runs/ executes the query
