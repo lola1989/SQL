@@ -1,14 +1,14 @@
 # SQL
 This repository contains:
-- General SQL Syntax
+- [SQL Syntax Folder](/SQL%20Syntax)
 - [The 7 Stages of SQL Order of Execution](/7%20Stages%20of%20SQL%20Order%20of%20Execution.txt)
-- SQL Server Functions Cheat Sheet
-- SQL Catalog Views and Metadata Functions
+- [SQL Server Functions Cheat Sheet] (/SQL%20Server%20Functions%20Cheat%20Sheet.txt)
+- [SQL Catalog Views and Metadata Functions[(/SQL%20Catalog%20Views%20and%20Metadata%20Functions.sql)
 
 ## The 7 Stages of SQL Order of Execution
 This document is an explanation of how SQL runs/ executes the query
 
-# SQL Syntax
+# SQL Syntax Folder
 Contains SQL Code for everyday use and general understanding and is laid out in the folders with the descriptions below:
 
 ## SQL Basics Pt 1
