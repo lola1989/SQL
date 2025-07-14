@@ -1,8 +1,13 @@
 # SQL
-SQL Code for everyday use and general understanding.
+This repository contains:
+- General SQL Syntax
+- The 7 Stages of SQL Order of Execution
 
 ## The 7 Stages of SQL Order of Execution
 This document is an explanation of how SQL runs/ executes the query
+
+# SQL Syntax
+Contains SQL Code for everyday use and general understanding and is laid out in the folders with the descriptions below:
 
 ## SQL Basics Pt 1
 SQL Code goes over:
