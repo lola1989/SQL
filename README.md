@@ -5,12 +5,12 @@ This repository contains:
 - [SQL Server Functions Cheat Sheet](/SQL%20Server%20Functions%20Cheat%20Sheet.txt)
 - [SQL Catalog Views and Metadata Functions](/SQL%20Catalog%20Views%20and%20Metadata%20Functions.sql)
 
-## The 7 Stages of SQL Order of Execution
-This document is an explanation of how SQL runs/ executes the query
-
 # SQL Syntax Folder
-Contains SQL Code for everyday use and general understanding and is laid out in the folders with the descriptions below:
+Contains SQL Code for everyday use and general understanding. Most of the code is utilizing the AdventureWorks2019 database.
 
+<details>
+  <summary>Click to expand</summary>
+  
 ## SQL Basics Pt 1
 SQL Code goes over:
 - Creating a Database & Schema
@@ -65,13 +65,9 @@ SQL Code discussing the types of indexes:
 - COMPOSIT KEY
 
 ## Window Functions
+</details>
+
+## The 7 Stages of SQL Order of Execution
+This document is an explanation of how SQL runs/ executes the query
 
 
-<details>
-  <summary>Click to expand</summary>
-
-  This content will be hidden until the user clicks "Click to expand".  
-  You can include anything here—text, code blocks, images, etc.
-
-  ```python
-  print("Hello from inside the dropdown!")
