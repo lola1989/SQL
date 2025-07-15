@@ -67,7 +67,18 @@ SQL Code discussing the types of indexes:
 ## Window Functions
 </details>
 
-## The 7 Stages of SQL Order of Execution
+# The 7 Stages of SQL Order of Execution
 This document is an explanation of how SQL runs/ executes the query
+
+# SQL Server Functions Cheat Sheet
+This is a text file that contains the most common SQL Functions
+- 🔄 Conversion Functions
+- 🔢 Numeric Functions
+- 📅 Date and Time Functions
+- 🔤 String Functions
+- 🧠 Logical Functions
+- 📊 Aggregate Functions
+- 🔗 Join Types
+- 🧩 Subquery Types
 
 
