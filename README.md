@@ -65,6 +65,14 @@ SQL Code discussing the types of indexes:
 - COMPOSIT KEY
 
 ## Window Functions
+- ROW_NUMBER
+- RANK
+- DENSE_RANK
+- NTILE
+- LAG
+- LEAD
+- FIRST_VALUE
+- LAST_VALUE
 </details>
 
 # The 7 Stages of SQL Order of Execution
